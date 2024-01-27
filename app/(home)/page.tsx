@@ -1,4 +1,4 @@
-import Movie from "../../components/movie";
+import Movie from "@/components/movie";
 import styles from "../../styles/home.module.css";
 
 export const metadata = {
@@ -18,7 +18,7 @@ export default async function HomePage() {
   const movies = await getMovies();
   return (
     <div className={styles.container}>
-      {movies.map((movie) => (
+      {movies.map((movie: any) => (
         <Movie
           key={movie.id}
           id={movie.id}
